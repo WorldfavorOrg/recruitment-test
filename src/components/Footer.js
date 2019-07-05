@@ -1,5 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles({
   root: {
@@ -12,45 +13,30 @@ const useStyles = makeStyles({
     borderTop: '1px solid #e1e1e1',
     padding: '17px 0 15px',
     margin: 'auto',
-    maxWidth: 1195,
     color: '#888',
+    fontSize: 12,
 
-    '& a': {
-      color: '#888 !important',
-    },
-
-    '& ul': {
-      '& li': {
-        padding: '0 10px',
-      },
-    },
-  }
+    '&>span': {
+      marginRight: 16,
+    }
+  },
 })
 
 const Footer = (props) => {
   const classes = useStyles(props)
   return (
     <div className={classes.root}>
-      <footer
-        className={classes.footer}
-        role="contentinfo"
-      >
-        <div className="clearfix">
-          <ul className="list-unstyled clearfix">
-            <li className="company-name">{ '© Worldfavor AB' }</li>
-            <li className="company-address">{ 'Munkbron 11, 111 28 Stockholm, Sweden' }</li>
-            <li className="company-rights">{ 'All rights reserved.' }</li>
-            <li className="company-terms">
-              <a href="https://worldfavor.com/terms-conditions/" target="_blank" rel="noopener noreferrer">
-                { 'Terms & conditions' }
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="appVersionInfo">
-          { 'Version 1.0.0' }
-        </div>
-      </footer>
+      <Grid container justify={'center'}>
+        <Grid item xs={12} sm={10} md={8}>
+          <footer
+            className={classes.footer}
+            role="contentinfo"
+          >
+            <span>{'Base code provided by © Worldfavor AB'}</span>
+            <span>{'Final result: candidate\'s property'}</span>
+          </footer>
+        </Grid>
+      </Grid>
     </div>
   )
 }

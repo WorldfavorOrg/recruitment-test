@@ -32,7 +32,7 @@ const Header = (props) => {
       <Grid container justify={'center'}>
         <Grid item xs={12} sm={10} md={8}>
           <Typography variant={'h3'} className={classes.title}>
-            {'Welcome back, '}<strong>John Doe!</strong>
+            {'Welcome back, '}<strong>{'John Doe!'}</strong>
           </Typography>
         </Grid>
       </Grid>
