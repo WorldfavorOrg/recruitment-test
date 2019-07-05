@@ -5,7 +5,7 @@ This repository is intended for Worldfavor's developer candidates only. It conta
 
 Candidates are required to go through the different required assignments by providing their own implementation. A review meeting will be held after receiving the candidate's code, questions will be asked regarding the code and the mindset displayed in the implementation. Any candidate cheating on the test will be seen during this meeting and will see their candidature be denied.
 
-This test should take no longer than 2h. If you feel you did not have the time to complete all the assignments and show all your capabilities, you are free to come back to us and we will take the time to ask you question about the points you did not fulfilled.
+This test should take no longer than 2h. If you feel you did not have the time to complete all the assignments and show all your capabilities, you are free to come back to us and we will take the time to ask you questions about the points you did not fulfill.
 
 How to answer to the different scenario is open to the candidate unless stated in the question.
 
@@ -19,7 +19,7 @@ Clone this repository to your local machine and run:
 yarn install
 yarn start
 ```
-A server should now be running on your machine with live update enable, and you should be all setup for the assignments.
+A server should now be running on your machine with live update enabled, and you should be all setup for the assignments.
 
 ## Assignments
 The different assignments are divided into multiple levels depending on the difficulty of the questions and on your knowledge of Javascript and React.
