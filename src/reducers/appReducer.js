@@ -9,11 +9,9 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+
     case SET_USER:
-      return {
-        ...state,
-        user: action.user,
-      }
+      /* Add implementation to set the user */
 
     default:
       return state

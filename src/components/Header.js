@@ -1,9 +1,9 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/styles'
+import { withStyles } from '@material-ui/styles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
-const useStyles = makeStyles(theme => ({
+const styles = theme => ({
   root: {
     paddingTop: 64,
     paddingBottom: 72,
@@ -23,10 +23,10 @@ const useStyles = makeStyles(theme => ({
   name: {
     fontWeight: theme.typography.fontWeightMedium,
   }
-}))
+})
 
 const Header = (props) => {
-  const classes = useStyles(props)
+  const { classes } = props
   const firstName = 'xxxx'
   return (
     <div className={classes.root}>
@@ -41,4 +41,4 @@ const Header = (props) => {
   )
 }
 
-export default Header
+export default withStyles(styles)(Header)

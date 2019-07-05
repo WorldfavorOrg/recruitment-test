@@ -1,8 +1,8 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/styles'
+import { withStyles } from '@material-ui/styles'
 import Grid from '@material-ui/core/Grid'
 
-const useStyles = makeStyles({
+const styles = {
   root: {
     position: 'absolute',
     bottom: 0,
@@ -20,10 +20,10 @@ const useStyles = makeStyles({
       marginRight: 16,
     }
   },
-})
+}
 
 const Footer = (props) => {
-  const classes = useStyles(props)
+  const { classes } = props
   return (
     <div className={classes.root}>
       <Grid container justify={'center'}>
@@ -41,4 +41,4 @@ const Footer = (props) => {
   )
 }
 
-export default Footer
+export default withStyles(styles)(Footer)

@@ -1,9 +1,9 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/styles'
+import { withStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 
-const useStyles = makeStyles(theme => ({
+const styles = theme => ({
   root: {
     paddingTop: 72,
     paddingBottom: 86,
@@ -22,10 +22,10 @@ const useStyles = makeStyles(theme => ({
       fontSize: 30,
     },
   }
-}))
+})
 
 const NetworkSection = (props) => {
-  const classes = useStyles(props)
+  const { classes } = props
   return (
     <Grid
       container
@@ -41,4 +41,4 @@ const NetworkSection = (props) => {
   )
 }
 
-export default NetworkSection
+export default withStyles(styles)(NetworkSection)
