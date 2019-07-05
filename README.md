@@ -1,68 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Worldfavor recruitment test
 
-## Available Scripts
+## Introduction
+This repository is intended for Worldfavor's developer candidates only. It contains a basic `react` project to base the assignments on. The candidate is required to fork this repository to his/her own Github account and work on the forked version.
 
-In the project directory, you can run:
+Candidates are required to go through the different required assignments by providing their own implementation. A review meeting will be held after receiving the candidate's code, questions will be asked regarding the code and the mindset displayed in the implementation. Any candidate cheating on the test will be seen during this meeting and will see their candidature be denied.
 
-### `npm start`
+This test should take no longer than 2h. If you feel you did not have the time to complete all the assignments and show all your capabilities, you are free to come back to us and we will take the time to ask you question about the points you did not fulfilled.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+How to answer to the different scenario is open to the candidate unless stated in the question.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Be as true to yourself as you can, and good luck!
 
-### `npm test`
+## Installation
+In order to run this project you need to have a working `node` environment with `yarn` installed.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone this repository to your local machine and run:
+```bash
+yarn install
+yarn start
+```
+A server should now be running on your machine with live update enable, and you should be all setup for the assignments.
 
-### `npm run build`
+## Assignments
+The different assignments are divided into multiple levels depending on the difficulty of the questions and on your knowledge of Javascript and React.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Each previous level is required in order to do the next level.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Each level tackle a set of knowledge involved in our everyday development processes. To us, implementation design is as important as solving the question. The way you think will be first assessed through your code and next through the review meeting.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+All assignments should be done without using external libraries, except for the one already available in `package.json`. No type definition nor linting are required from the candidate, but if you feel the need, we are open for this kind of initiatives.
 
-### `npm run eject`
+### Level 1
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Using the provided design, you are asked to reimplement the scene, while supporting an unknown amount of "network". The UI has to be responsive and show 1 network on small resolution, 2 on medium, 3 on large and 4 on extra large, on the same row.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The different components can be implemented using `Material-UI` component library, and is recommended for small building blocks such as a button.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Mock data that you should use is provided in `mockData.json`. There is no need for that task to use any state management to store the mock data, just a direct access is enough.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Level 2
 
-## Learn More
+A `redux` store already exist in the application to store app data. For this task, it is asked to the candidate to create a new reducer, actions and selectors to store network information.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The mock data should be stored to the redux store whenever the application is mounting. When using the networks data, the networks should come from the redux store and no more directly from `mockData.json`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Level 3
 
-### Code Splitting
+In this task, the candidate is asked to load the data from our API by mocking an `axios` GET request. The content of the response will be the content of `mockData.json`.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Optional
 
-### Analyzing the Bundle Size
+The candidate has the possibility to write all components using hooks, and will have to use `useSelector` and `useDispatch` from `react-redux` to communicate with the redux store. A new hook `useNetworks` will have to be implemented to load all the data at once and return the fetched networks, if available, or an empty array.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The newly created hook should be used like this:
+```js
+const networks = useNetworks()
+```
