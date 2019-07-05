@@ -32,21 +32,24 @@ All assignments should be done without using external libraries, except for the 
 
 ### Level 1
 
-Using the provided design, you are asked to reimplement the scene, while supporting an unknown amount of "network". The UI has to be responsive and show 1 network on small resolution, 2 on medium, 3 on large and 4 on extra large, on the same row.
+Using the provided design (in `design.png`), you are asked to reimplement the scene, while supporting an unknown amount of "network". The UI has to be responsive and show 1 "network card" on small resolution, 2 on medium, 3 on large and 4 on extra large, on the same row.
 
 The different components can be implemented using `Material-UI` component library, and is recommended for small building blocks such as a button.
 
-Mock data that you should use is provided in `mockData.json`. There is no need for that task to use any state management to store the mock data, just a direct access is enough.
+Mock data that you should use is provided in `mockData.js`. There is no need for that task to use any state management to store the mock data, just a direct access is enough.
+
+We are not looking for a pixel perfect implementation, but we will be attentive to how true your implementation is to the design.
 
 ### Level 2
 
-A `redux` store already exist in the application to store app data. For this task, it is asked to the candidate to create a new reducer, actions and selectors to store network information.
+A `redux` store already exist in the application to store app data. For this task, first it is asked to the candidate to link the name in the title with the first name present in the `appReducer`, in `state.app.user.firstName`. Then create a new reducer, actions and selectors to store network information.
+The access complexity to each network object is important in this task and will be evaluated.
 
-The mock data should be stored to the redux store whenever the application is mounting. When using the networks data, the networks should come from the redux store and no more directly from `mockData.json`.
+The mock data should be stored to the redux store whenever the application is mounting. When using the networks data, the networks should come from the redux store and no more directly from `mockData.js`.
 
 ### Level 3
 
-In this task, the candidate is asked to load the data from our API by mocking an `axios` GET request. The content of the response will be the content of `mockData.json`.
+In this task, the candidate is asked to load the data from our API by mocking an `axios` GET request. The content of the response will be the content of `mockData.js`.
 
 ### Optional
 
