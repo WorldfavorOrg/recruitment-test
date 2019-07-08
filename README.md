@@ -35,6 +35,7 @@ Using the provided design (in `design.png`), you are asked to reimplement the sc
 - support an unknown amount of "network"
 - have a responsive UI that display different number of "network card" depending on the screen resolution
 - use `Material-UI` for small building blocks
+- using the `Dialog` component from `Material-UI`, show a dialog containing the network name and description when clicking the network card
 
 Mock data for the list of networks is provided in `mockData.js`. For this task, there is no need to use state management, only a direct access is enough.
 
@@ -42,8 +43,8 @@ We are not looking for a pixel perfect implementation, but we will be attentive 
 
 ### Task 2
 
-For this task, the candidate is asked to work on state mangament while supporting the following requirements:
-- the header should include the first name of the user in place of `xxxx`
+For this task, the candidate is asked to work on state management while supporting the following requirements:
+- the header should include the first name of the user in place of `Welcome back, xxxx!`
 - using Redux, implement reducer, actions and selectors to store and retrieve network objects
 - store network data in the implemented state when the app is first loaded
 - network objects have to come from the redux store whenever using them (no more direct access to `mockData.js`) 
