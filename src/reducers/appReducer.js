@@ -4,6 +4,7 @@ const initialState = {
   user: {
     firstName: 'John',
     lastName: 'Doe',
+    token: 'Basic xxxxx-xxxxx-xxxxx-xxxxx'
   },
 }
 
