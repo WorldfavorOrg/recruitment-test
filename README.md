@@ -1,13 +1,21 @@
 # Worldfavor recruitment test
 
 ## Introduction
-This repository is intended for Worldfavor's developer candidates only. It contains a basic `react` project to base the assignments on. The candidate is required to fork this repository to his/her own Github account and work on the forked version.
+This repository is for Worldfavor's developer candidates only. 
 
-Candidates are required to go through the different required assignments by providing their own implementation. A review meeting will be held after receiving the candidate's code, questions will be asked regarding the code and the mindset displayed in the implementation. Plagiarism is prohibited, it will be seen during this meeting and the candidate will see his/her candidature be denied.
+It contains a basic `react` project to base the assignments upon. 
 
-This test should take no longer than 2h. If you feel you did not have the time to complete all the assignments and show all your capabilities, you are free to come back to us and we will take the time to ask you questions about the points you did not fulfill.
+Candidates are required to go through the different assignments by providing their own implementation. 
 
-How to answer to the different scenario is open to the candidate unless stated in the question.
+A review meeting shall be held after receiving the candidate's code; questions may be asked regarding the code and the mindset displayed in the implementation. 
+
+Plagiarism and collaboration are not only unethical but strongly discouraged. We ask that you clone the repo to your local disk and submit it back in a zip file to mitigate this.
+
+This test should take no longer than 2h. 
+
+If you feel you did not have the time to complete all the assignments and show all your capabilities, please submit your response for evaluation as the test is designed to asses various skill levels.
+
+How to answer the different scenarios is open to the candidate unless stated in the question.
 
 Be as true to yourself as you can, and good luck!
 
@@ -22,12 +30,19 @@ yarn start
 A server should now be running on your machine with live update enabled, and you should be all setup for the assignments.
 
 ## Assignments
-The different assignments are divided into multiple tasks, each task rely on the previous to work. 
-Each task tackles a set of knowledge involved in our everyday development processes. To us, implementation design is as important as solving the task. The way you think will be first assessed through your code and next through the review meeting.
+The different assignments are divided into multiple tasks; each task relies on the previous to work. 
 
-All assignments should be done without using external libraries, except for the one already available in `package.json`. No type definition nor linting are required from the candidate, but if you feel the need, we are open for this kind of initiatives.
+Each task tackles a set of knowledge involved in our everyday development processes. 
 
-Each task should be divided into its own branch on Github, using the following naming convention: `task#`.
+To us, implementation design is as important as solving the assignment. 
+
+The way you think will be first assessed through your code and further in a review meeting.
+
+All assignments would ideally be completed without using external libraries, except for the one already available in `package.json`. 
+
+No type definition nor linting are required from the candidate, but if you feel the need, we are open for this kind of initiatives.
+
+Each task should be divided into its own folder, using the following naming convention: `task#`.
 
 ### Task 1
 
